@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import type { AppProps } from "next/app";
-import { ConfigProvider } from "antd";
-import "antd/dist/antd.variable.min.css";
 import "antd/dist/antd.dark.css";
 import { THEME } from "@/util/constant";
 import { Context } from "@/component";
@@ -10,9 +8,9 @@ import { Context } from "@/component";
 
 const stylesheets = {
   [THEME.LIGHT]:
-    "https://cdnjs.cloudflare.com/ajax/libs/antd/4.17.0-alpha.7/antd.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.min.css",
   [THEME.DARK]:
-    "https://cdnjs.cloudflare.com/ajax/libs/antd/4.17.0-alpha.7/antd.dark.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.dark.min.css",
 };
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -29,14 +27,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const getStylesheetLink = (): HTMLLinkElement =>
     document.head.querySelector("#antd-stylesheet") || createStylesheetLink();
-
-  useEffect(() => {
-    ConfigProvider.config({
-      theme: {
-        primaryColor: "#25b864",
-      },
-    });
-  }, [theme]);
 
   const onToggleTheme = () => {
     const newTheme = theme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT;
