@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { AppProps } from "next/app";
 import "antd/dist/antd.dark.css";
+import "bulma/css/bulma.min.css";
 import { THEME } from "@/util/constant";
 import { Context } from "@/component";
 

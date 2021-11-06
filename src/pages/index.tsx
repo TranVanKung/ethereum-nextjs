@@ -1,5 +1,7 @@
-const Home = () => {
-  return <div style={{ padding: "100px" }}>home</div>;
+import Home from "@/module/home";
+
+const HomePage = () => {
+  return <Home />;
 };
 
-export default Home;
+export default HomePage;
