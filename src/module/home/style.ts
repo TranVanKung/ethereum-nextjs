@@ -4,8 +4,9 @@ const HomePageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: white;
+  font-size: 1.6rem;
 `;
 
 export { HomePageWrapper };

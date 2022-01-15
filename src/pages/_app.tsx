@@ -1,9 +1,10 @@
 import { useState } from "react";
 import type { AppProps } from "next/app";
-import "antd/dist/antd.dark.css";
-import "bulma/css/bulma.min.css";
+import "bulma/css/bulma.css";
+import "antd/dist/antd.css";
 import { THEME } from "@/util/constant";
 import { Context } from "@/component";
+import { GlobalStyle } from "@/style/global";
 
 // https://stackblitz.com/edit/antd-dark-mode-toggle-example?file=App.tsx
 
@@ -43,6 +44,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       }}
     >
       <Component {...pageProps} />
+      <GlobalStyle />
     </Context.Provider>
   );
 };
